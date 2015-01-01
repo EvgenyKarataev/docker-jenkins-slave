@@ -30,5 +30,3 @@ VOLUME /var/jenkins
 EXPOSE 22
 
 CMD ["/usr/sbin/sshd", "-D"]
-
-USER jenkins
