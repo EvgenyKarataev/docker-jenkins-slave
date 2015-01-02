@@ -14,9 +14,12 @@ RUN curl -sSL http://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binari
   && mv /usr/share/apache-maven-$MAVEN_VERSION /usr/share/maven \
   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
 
+ENV JAVA_HOME /usr/bin/java
+
 ENV MAVEN_HOME /usr/share/maven
 ENV M2_HOME /usr/share/maven
 ENV M2 $M2_HOME/bin
+
 ENV PATH $M2:$PATH
 
 RUN useradd -d /home/jenkins jenkins
