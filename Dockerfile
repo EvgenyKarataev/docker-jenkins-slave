@@ -28,7 +28,8 @@ RUN chown jenkins /home/jenkins
 
 RUN echo "jenkins:jenkins" | chpasswd
 
-VOLUME /var/jenkins
+RUN mkdir -p /var/jenkins
+RUN chown jenkins:jenkins /var/jenkins
 
 EXPOSE 22
 
