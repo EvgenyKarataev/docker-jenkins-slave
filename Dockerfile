@@ -33,8 +33,6 @@ RUN chown jenkins:jenkins /var/jenkins
 
 VOLUME /var/jenkins
 
-USER jenkins
-
 EXPOSE 22
 
 CMD ["/usr/sbin/sshd", "-D"]
