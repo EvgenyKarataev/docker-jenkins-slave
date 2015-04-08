@@ -31,6 +31,8 @@ RUN echo "jenkins:jenkins" | chpasswd
 RUN mkdir -p /var/jenkins
 RUN chown jenkins:jenkins /var/jenkins
 
+VOLUME /var/jenkins
+
 EXPOSE 22
 
 CMD ["/usr/sbin/sshd", "-D"]
